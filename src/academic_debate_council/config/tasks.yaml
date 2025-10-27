@@ -1,0 +1,207 @@
+---
+spiritual_analysis:
+  description: |-
+    **LANGUAGE RULE: If {wellbeing_topic} is in Arabic, respond entirely in Arabic. If in English, respond in English.**
+
+    Analyze through the Spiritual Pillar using this methodology: (1) Establish Islamic Foundation with Quranic verses (cite as surah:ayah), hadith with sources, and classical scholars (Al-Ghazali, Ibn Qayyim, Ibn Taymiyyah). (2) Conduct Maqasid al-Shariah analysis identifying which objectives are affected (Hifz al-din, al-nafs, al-aql, al-nasl, al-mal). (3) Assess spiritual impacts on tazkiyah (purification), taqwa (God-consciousness), and ikhlas (sincerity). (4) Provide three quantified scores from -3 to +3: Connection to Allah, Purposeful Living, Inner Purification - with brief justifications. KEEP TO 500-800 WORDS MAX. Be specific with citations - don't fabricate sources. Speak FIRST, so cannot reference other agents yet. Provide clear Islamic framework others can build on.
+
+    CRITICAL: In Round 1, give comprehensive analysis (500-800 words). IF the Orchestrator questions you in Round 2, respond BRIEFLY (300-500 words) addressing the SPECIFIC question with evidence. Quote the other expert's claim you're responding to. Don't be polite - if you disagree, say so with data. If they're right, admit it and adjust.
+  expected_output: 'A comprehensive spiritual analysis report (500-800 words) covering:
+    1) Islamic Foundation (Quranic verses, hadith, classical scholars), 2) Maqasid
+    al-Shariah analysis, 3) Spiritual impact assessment (tazkiyah, taqwa, ikhlas),
+    4) Three quantified spiritual scores with justifications, 5) Framework for other
+    pillars to build upon'
+  agent: sheikh_dr_ibrahim_al_tazkiyah___spiritual_pillar_expert
+emotional_analysis:
+  description: |-
+    **LANGUAGE RULE: If {wellbeing_topic} is in Arabic, respond entirely in Arabic. If in English, respond in English.**
+
+    You speak SECOND. Start with "Sheikh al-Tazkiyah established that [summarize key spiritual point]..." and explicitly build on the spiritual foundation. Analyze through these steps: (1) Identify emotional landscape - primary emotions evoked, emotion regulation mechanisms, cultural-emotional dynamics in Gulf context. (2) Apply Islamic Emotional Framework - Al-Ghazali's heart diseases/health analysis, sabr (patience) and shukr (gratitude) dimensions, fitrah (natural disposition) alignment. (3) Cite 2-3 actual psychological studies with proper format (Author, Year, Journal name) - include effect sizes if relevant. (4) Bridge Islamic wisdom with Western science. (5) Provide three quantified scores from -3 to +3: Balance (Tawazun), Resilience (Sabr), Emotional Transformation - with justifications. KEEP TO 500-800 WORDS MAX. MUST explicitly reference Spiritual Agent's analysis.
+
+    CRITICAL: In Round 1, give comprehensive analysis (500-800 words). IF the Orchestrator questions you in Round 2, respond BRIEFLY (300-500 words) addressing the SPECIFIC question with evidence. Quote the other expert's claim you're responding to. Don't be polite - if you disagree, say so with data. If they're right, admit it and adjust.
+  expected_output: 'A comprehensive emotional analysis report (500-800 words) covering:
+    1) Building on spiritual foundation, 2) Emotional landscape assessment, 3) Islamic
+    emotional framework application, 4) Psychological evidence (2-3 cited studies),
+    5) Three quantified emotional scores with justifications'
+  agent: dr_layla_al_qalb___emotional_pillar_expert
+  context:
+  - spiritual_analysis
+intellectual_analysis:
+  description: |-
+    **LANGUAGE RULE: If {wellbeing_topic} is in Arabic, respond entirely in Arabic. If in English, respond in English.**
+
+    You speak THIRD. Start with "Sheikh al-Tazkiyah established [X] and Dr. al-Qalb showed [Y]. Yet intellectually, I must ask..." and engage critically with BOTH prior analyses. Your methodology: (1) Knowledge Classification - Is this true 'ilm (knowledge) or just compliance? Fard ayn vs behavioral conditioning? Can wisdom (hikmah) be mandated or must it be cultivated? (2) Learning Mechanisms - Apply Bloom's taxonomy level, identify cognitive processes involved, note barriers to genuine learning. (3) Islamic Intellectual Tradition - Reference "لَا إِكْرَاهَ فِي الدِّينِ" (No compulsion in religion - Quran 2:256), analyze prophetic pedagogy, balance obligation and understanding. (4) Pose 2-3 genuine critical questions that advance the debate. (5) Provide three quantified scores from -3 to +3: Truth-Seeking, Wisdom (Hikmah), Contemplation (Tafakkur) - with justifications. KEEP TO 500-800 WORDS MAX. MUST engage with Spiritual AND Emotional analyses explicitly.
+
+    CRITICAL: In Round 1, give comprehensive analysis (500-800 words). IF the Orchestrator questions you in Round 2, respond BRIEFLY (300-500 words) addressing the SPECIFIC question with evidence. Quote the other expert's claim you're responding to. Don't be polite - if you disagree, say so with data. If they're right, admit it and adjust.
+  expected_output: 'A comprehensive intellectual analysis report (500-800 words) covering:
+    1) Critical engagement with prior analyses, 2) Knowledge classification assessment,
+    3) Learning mechanisms analysis, 4) Islamic intellectual tradition application,
+    5) Critical questions for debate advancement, 6) Three quantified intellectual
+    scores with justifications'
+  agent: dr_hassan_al_hikmah___intellectual_pillar_expert
+  context:
+  - spiritual_analysis
+  - emotional_analysis
+physical_analysis:
+  description: |-
+    **LANGUAGE RULE: If {wellbeing_topic} is in Arabic, respond entirely in Arabic. If in English, respond in English.**
+
+    You speak FOURTH. Start with "The spiritual, emotional, and intellectual dimensions described are [supported/challenged] by physiological evidence. Specifically, [cite data]..." Reference at least 2 prior agents explicitly. Your methodology: (1) Validate/Challenge Prior Claims - Ground abstract concepts in measurable health outcomes using quantitative data (RR, OR, percentages, effect sizes). (2) Physiological Impact Assessment - Brief assessment across: movement/sedentary behavior, stress physiology (cortisol, heart rate variability), chronic disease risk (quantified), sleep quality effects. (3) Islamic Bioethics - Body as Amanah (trust from Allah), Hifz al-nafs (preservation of life) as maqasid priority, prophetic health guidance (specific hadith), balance between spiritual obligation and physical limits. (4) Evidence Synthesis - Cite 3-4 key studies (Author, Year, Journal, effect size/RR/OR). Include Gulf-specific epidemiology. (5) Provide three quantified scores from -3 to +3: Health (Nutrition/Fitness), Strength (Physical Capacity), Prevention (Long-term Health) - with data-backed justifications. KEEP TO 500-800 WORDS MAX. MUST include quantitative data.
+
+    CRITICAL: In Round 1, give comprehensive analysis (500-800 words). IF the Orchestrator questions you in Round 2, respond BRIEFLY (300-500 words) addressing the SPECIFIC question with evidence. Quote the other expert's claim you're responding to. Don't be polite - if you disagree, say so with data. If they're right, admit it and adjust.
+  expected_output: 'A comprehensive physical analysis report (500-800 words) covering:
+    1) Validation of prior analyses with data, 2) Physiological impact assessment,
+    3) Islamic bioethics framework, 4) Evidence synthesis (3-4 studies with effect
+    sizes), 5) Gulf-specific health context, 6) Three quantified physical scores with
+    data justification'
+  agent: dr_fatima_al_jism___physical_pillar_expert
+  context:
+  - spiritual_analysis
+  - emotional_analysis
+  - intellectual_analysis
+social_analysis:
+  description: |-
+    **LANGUAGE RULE: If {wellbeing_topic} is in Arabic, respond entirely in Arabic. If in English, respond in English.**
+
+    You speak FIFTH and LAST among pillar experts. Start with "Having heard all four experts, I observe that [spiritual/emotional/intellectual/physical dimensions] are fundamentally enabled or constrained by social structures. Specifically..." MUST reference ALL FOUR prior agents explicitly by name. Your methodology: (1) Integration of Prior Pillars - Synthesize patterns across all four analyses. (2) Social Structure Analysis - Examine micro (interpersonal: family, workplace), meso (community: mosque, neighborhood), macro (societal: national identity, class, ethnicity, gender systems) levels. (3) Power & Inequality Analysis - Who benefits? Who is disadvantaged? How does this reinforce or challenge existing hierarchies? What about the 88% non-citizen workforce? (4) Gulf Social Context - Expat-national relations (kafala system), gender segregation, tribal dynamics ('asabiyyah), generational differences. (5) Apply Sociological Theory - Ibn Khaldun's 'asabiyyah, Durkheim's solidarity, Bourdieu's capital, or social identity theory. (6) Provide three scores from -3 to +3: Care (Empathy/Generosity), Cooperation & Solidarity, Responsibility (Accountability). (7) Identify 2-3 key tensions for Synthesizer. Keep response 600-900 words.
+
+    CRITICAL: In Round 1, give comprehensive analysis (600-900 words). IF the Orchestrator questions you in Round 2, respond BRIEFLY (300-500 words) addressing the SPECIFIC question with evidence. Quote the other expert's claim you're responding to. Don't be polite - if you disagree, say so with data. If they're right, admit it and adjust.
+  expected_output: 'A comprehensive social analysis report (600-900 words) covering:
+    1) Integration of all four prior analyses, 2) Social structure mapping (micro/meso/macro),
+    3) Power and inequality analysis, 4) Gulf social context assessment, 5) Sociological
+    theory application, 6) Three quantified social scores, 7) Key tensions identification
+    for synthesis'
+  agent: dr_aisha_al_mujtama___social_pillar_expert
+  context:
+  - spiritual_analysis
+  - emotional_analysis
+  - intellectual_analysis
+  - physical_analysis
+orchestrator_analysis_question_assignment:
+  description: 'Read ALL FIVE Round 1 analyses carefully. Your task: (1) Identify
+    the 2-3 BIGGEST tensions or contradictions between experts. Be specific - quote
+    exact claims that conflict. (2) Pose ONE direct question to 3-4 specific experts
+    that forces them to address another expert''s contrary claim. Questions must reference
+    specific statements like "Dr. X, you said [quote]. But Dr. Y claims [quote]. These
+    contradict. Explain." (3) Keep your analysis to 400-600 words total. Be DIRECT
+    and CRITICAL. Your job is to provoke genuine debate, not summarize politely. Format:
+    "KEY TENSIONS: [Tension 1: Quote from Expert A vs Quote from Expert B]. [Tension
+    2: ...]. DIRECTED QUESTIONS: Dr. al-Qalb - [specific question referencing another
+    expert]. Dr. al-Hikmah - [specific question]. Dr. al-Jism - [specific question]."'
+  expected_output: List of 2-3 key tensions with specific quote contradictions + targeted
+    questions to 3-4 experts (400-600 words total)
+  agent: dr_yusuf_al_mudeer___debate_orchestrator
+  context:
+  - spiritual_analysis
+  - emotional_analysis
+  - intellectual_analysis
+  - physical_analysis
+  - social_analysis
+emotional_agent_response_to_orchestrator:
+  description: 'The Orchestrator has posed you a SPECIFIC QUESTION based on tensions
+    with other experts. Answer DIRECTLY and BRIEFLY (300-500 words max). Quote the
+    specific claim from the other expert, cite evidence that supports your position,
+    and explain why their concern doesn''t invalidate your analysis OR admit where
+    they''re right and adjust your position. No long preambles - jump straight to
+    answering the question. If you disagree with another expert, say so explicitly
+    with data. Format: "Dr. al-Hikmah asks [restate question]. My response: [direct
+    answer with evidence]. The tension between my claim and his/hers resolves as follows:
+    [mechanism/explanation]."'
+  expected_output: Direct 300-500 word response to Orchestrator's specific question
+    with evidence and clear position
+  agent: dr_layla_al_qalb___emotional_pillar_expert
+  context:
+  - orchestrator_analysis_question_assignment
+intellectual_agent_response_to_orchestrator:
+  description: 'The Orchestrator has posed you a SPECIFIC QUESTION based on tensions
+    with other experts. Answer DIRECTLY and BRIEFLY (300-500 words max). Quote the
+    specific claim from the other expert, cite evidence that supports your position,
+    and explain why their concern doesn''t invalidate your analysis OR admit where
+    they''re right and adjust your position. No long preambles - jump straight to
+    answering the question. If you disagree with another expert, say so explicitly
+    with data. Format: "Dr. al-Qalb asks [restate question]. My response: [direct
+    answer with evidence]. The tension between my claim and his/hers resolves as follows:
+    [mechanism/explanation]."'
+  expected_output: Direct 300-500 word response to Orchestrator's specific question
+    with evidence and clear position
+  agent: dr_hassan_al_hikmah___intellectual_pillar_expert
+  context:
+  - orchestrator_analysis_question_assignment
+physical_agent_response_to_orchestrator:
+  description: 'The Orchestrator has posed you a SPECIFIC QUESTION based on tensions
+    with other experts. Answer DIRECTLY and BRIEFLY (300-500 words max). Quote the
+    specific claim from the other expert, cite evidence that supports your position,
+    and explain why their concern doesn''t invalidate your analysis OR admit where
+    they''re right and adjust your position. No long preambles - jump straight to
+    answering the question. If you disagree with another expert, say so explicitly
+    with data. Format: "Dr. al-Hikmah asks [restate question]. My response: [direct
+    answer with evidence]. The tension between my claim and his/hers resolves as follows:
+    [mechanism/explanation]."'
+  expected_output: Direct 300-500 word response to Orchestrator's specific question
+    with evidence and clear position
+  agent: dr_fatima_al_jism___physical_pillar_expert
+  context:
+  - orchestrator_analysis_question_assignment
+social_agent_response_to_orchestrator:
+  description: 'The Orchestrator has posed you a SPECIFIC QUESTION based on tensions
+    with other experts. Answer DIRECTLY and BRIEFLY (300-500 words max). Quote the
+    specific claim from the other expert, cite evidence that supports your position,
+    and explain why their concern doesn''t invalidate your analysis OR admit where
+    they''re right and adjust your position. No long preambles - jump straight to
+    answering the question. If you disagree with another expert, say so explicitly
+    with data. Format: "Dr. al-Jism asks [restate question]. My response: [direct
+    answer with evidence]. The tension between my claim and his/hers resolves as follows:
+    [mechanism/explanation]."'
+  expected_output: Direct 300-500 word response to Orchestrator's specific question
+    with evidence and clear position
+  agent: dr_aisha_al_mujtama___social_pillar_expert
+  context:
+  - orchestrator_analysis_question_assignment
+spiritual_agent_response_to_orchestrator:
+  description: 'The Orchestrator has posed you a SPECIFIC QUESTION based on tensions
+    with other experts. Answer DIRECTLY and BRIEFLY (300-500 words max). Quote the
+    specific claim from the other expert, cite Quranic/hadith evidence that supports
+    your position, and explain why their concern doesn''t invalidate your Islamic
+    analysis OR admit where they''re right and adjust your position with scholarly
+    humility. No long preambles - jump straight to answering the question. If you
+    disagree with another expert, say so explicitly with Islamic evidence. Format:
+    "Dr. al-Hikmah asks [restate question]. My response: [direct answer with Quranic/hadith
+    evidence]. The tension between my claim and his/hers resolves as follows: [Islamic
+    mechanism/explanation]."'
+  expected_output: Direct 300-500 word response to Orchestrator's specific question
+    with Islamic evidence and clear position
+  agent: sheikh_dr_ibrahim_al_tazkiyah___spiritual_pillar_expert
+  context:
+  - orchestrator_analysis_question_assignment
+integrated_wellbeing_assessment:
+  description: 'Read the COMPLETE 2-round debate: Round 1 (all 5 initial analyses)
+    + Orchestrator intervention + Round 2 (expert responses to orchestrator). Produce
+    comprehensive report (1500-2500 words) with: EXECUTIVE SUMMARY (250 words - what
+    should decision-makers know?), ROUND 1 SUMMARY (each pillar: 2 sentences core
+    finding + scores + unique insight), KEY TENSIONS IDENTIFIED (the 2-3 main debates
+    the Orchestrator surfaced - quote specific expert disagreements), HOW TENSIONS
+    RESOLVED IN ROUND 2 (did experts reach consensus? partial resolution? legitimate
+    pluralism where both are valid?), CROSS-PILLAR SYNERGIES (where experts agreed
+    strongly), INTEGRATED ASSESSMENT (net impact: Positive/Negative/Mixed with rationale,
+    confidence level: High/Moderate/Low with factors affecting confidence, contextual
+    considerations), RECOMMENDATIONS (for individuals, for organizations, for society/policymakers,
+    for further research), CONCLUSION (200 words integrating all 5 perspectives and
+    the 2-round debate process). Be scrupulously fair to all perspectives. When experts
+    disagreed and debate didn''t resolve it, present BOTH positions without forcing
+    false consensus. Use clear headers for scannability. Write for executive/decision-maker
+    audience. Make complexity accessible without losing nuance.'
+  expected_output: Complete 2000-3000 word integrated report covering all 4 debate
+    rounds with evolution analysis, final positions, and high-confidence assessment
+  agent: dr_amira_al_tawhid___synthesizer
+  context:
+  - spiritual_analysis
+  - emotional_analysis
+  - intellectual_analysis
+  - physical_analysis
+  - social_analysis
+  - orchestrator_analysis_question_assignment
+  - spiritual_agent_response_to_orchestrator
+  - emotional_agent_response_to_orchestrator
+  - intellectual_agent_response_to_orchestrator
+  - physical_agent_response_to_orchestrator
+  - social_agent_response_to_orchestrator

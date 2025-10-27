@@ -1,0 +1,4 @@
+2025-10-27 09:25:34 - Loaded .env file
+2025-10-27 09:25:38 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-10-27 09:25:40 - Your app is available at http://localhost:8000
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted

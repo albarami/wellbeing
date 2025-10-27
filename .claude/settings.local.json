@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(set PYTHONIOENCODING=utf-8:*)",
+      "Bash(iconv:*)",
+      "Bash(pip install:*)",
+      "Bash(C:UsersUserAppDataLocalProgramsPythonPython312python.exe -m pip install -e .)",
+      "Bash(\"/c/Users/User/AppData/Local/Programs/Python/Python312/python.exe\" -m pip install -e .)",
+      "Bash(pip show:*)",
+      "Bash(find:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

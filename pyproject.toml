@@ -1,0 +1,31 @@
+[project]
+name = "academic_debate_council"
+version = "0.1.0"
+description = "academic_debate_council using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.203.0,<1.0.0",
+    "streamlit>=1.28.0",
+    "python-dotenv>=1.0.0",
+    "chainlit>=1.0.0",
+    "anthropic>=0.18.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "openai>=1.0.0",
+]
+
+[project.scripts]
+academic_debate_council = "academic_debate_council.main:run"
+run_crew = "academic_debate_council.main:run"
+train = "academic_debate_council.main:train"
+replay = "academic_debate_council.main:replay"
+test = "academic_debate_council.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
