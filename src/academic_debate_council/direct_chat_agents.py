@@ -716,7 +716,7 @@ DO NOT write analysis from memory - use tools first!""")
                         # Check timeout
                         if time.time() - stream_start > stream_timeout:
                             timeout_triggered = True
-                            yield "\n\n⚠️ Response timeout (3 min) - continuing to next phase...\n"
+                            yield "\n\n[TIMEOUT] Response timeout (3 min) - continuing to next phase...\n"
                             break
                         if event.type == "content_block_start":
                             if hasattr(event, 'content_block') and event.content_block.type == "tool_use":
@@ -757,17 +757,17 @@ DO NOT write analysis from memory - use tools first!""")
                             tool_use_id = block.id
 
                             # Show tool execution
-                            yield f"\n\n🔧 Executing tool: **{tool_name}**\n"
+                            yield f"\n\n[TOOL] Executing: **{tool_name}**\n"
 
                             # Execute the tool with exception handling
                             try:
                                 tool_result = self._execute_tool(tool_name, tool_input)
                             except Exception as tool_error:
-                                tool_result = f"⚠️ Tool execution error: {str(tool_error)[:200]}"
-                                yield f"⚠️ Error executing {tool_name}: {str(tool_error)[:200]}\n"
+                                tool_result = f"[ERROR] Tool execution error: {str(tool_error)[:200]}"
+                                yield f"[ERROR] Executing {tool_name}: {str(tool_error)[:200]}\n"
 
                             # Show result
-                            yield f"📊 Tool result:\n{tool_result}\n\n"
+                            yield f"[RESULT] Tool result:\n{tool_result}\n\n"
 
                             # Store tool result for this tool
                             tool_results.append({
@@ -795,7 +795,7 @@ DO NOT write analysis from memory - use tools first!""")
                         break
 
         except Exception as e:
-            yield f"\n\n⚠️ Error executing {self.role}: {str(e)}"
+            yield f"\n\n[ERROR] Error executing {self.role}: {str(e)}"
 
 
 class DebateAgentsManager:

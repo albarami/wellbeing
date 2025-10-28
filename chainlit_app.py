@@ -313,7 +313,7 @@ async def main(message: cl.Message):
             while True:
                 # Check for timeout
                 if time.time() - task_start > task_timeout:
-                    timeout_msg = f"\n\n⚠️ **Task timeout ({task_timeout}s)** - Moving to next agent...\n"
+                    timeout_msg = f"\n\n[TIMEOUT] **Task timeout ({task_timeout}s)** - Moving to next agent...\n"
                     await agent_msg.stream_token(timeout_msg)
                     full_response += timeout_msg
                     break
@@ -332,7 +332,7 @@ async def main(message: cl.Message):
                 except StopIteration:
                     break
                 except Exception as gen_error:
-                    error_msg = f"\n\n⚠️ Generator error: {str(gen_error)[:200]}\n"
+                    error_msg = f"\n\n[ERROR] Generator error: {str(gen_error)[:200]}\n"
                     await agent_msg.stream_token(error_msg)
                     full_response += error_msg
                     break
@@ -347,7 +347,7 @@ async def main(message: cl.Message):
 
         except Exception as e:
             task_elapsed = time.time() - task_start
-            error_text = f"\n\n⚠️ Error after {task_elapsed:.1f}s: {str(e)[:200]}\n\nContinuing to next task..."
+            error_text = f"\n\n[ERROR] Error after {task_elapsed:.1f}s: {str(e)[:200]}\n\nContinuing to next task..."
             await agent_msg.stream_token(error_text)
             await agent_msg.update()
             full_response += error_text
