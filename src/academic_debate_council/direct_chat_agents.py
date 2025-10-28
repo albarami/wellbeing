@@ -11,7 +11,6 @@ import yaml
 from pathlib import Path
 from typing import Dict, List, Optional, Iterator
 from anthropic import Anthropic
-import streamlit as st
 import threading
 import time
 
@@ -493,12 +492,63 @@ Provides reset points, though rushed prayers may limit depth.
                 }
             ]
 
-        return []  # No tools for orchestrator/synthesizer
+        # Synthesizer Agent Tools - needs ALL tools for comprehensive verification
+        elif 'synthesizer' in name_lower or 'tawhid' in name_lower or 'amira' in name_lower:
+            return [
+                {
+                    "name": "get_qatar_stats_standalone",
+                    "description": "Get Qatar statistics and facts",
+                    "input_schema": {
+                        "type": "object",
+                        "properties": {
+                            "query": {"type": "string"}
+                        },
+                        "required": ["query"]
+                    }
+                },
+                {
+                    "name": "verify_medical_claim_standalone",
+                    "description": "Verify health/medical claims via PubMed",
+                    "input_schema": {
+                        "type": "object",
+                        "properties": {
+                            "keywords": {"type": "string"}
+                        },
+                        "required": ["keywords"]
+                    }
+                },
+                {
+                    "name": "search_hadith_standalone",
+                    "description": "Search for hadith by keywords",
+                    "input_schema": {
+                        "type": "object",
+                        "properties": {
+                            "keywords": {"type": "string"}
+                        },
+                        "required": ["keywords"]
+                    }
+                },
+                {
+                    "name": "verify_citation_standalone",
+                    "description": "Verify academic citations",
+                    "input_schema": {
+                        "type": "object",
+                        "properties": {
+                            "author": {"type": "string"},
+                            "year": {"type": "string"},
+                            "title_keywords": {"type": "string"}
+                        },
+                        "required": ["author", "year", "title_keywords"]
+                    }
+                }
+            ]
+
+        return []  # No tools for orchestrator only
 
     def _execute_tool(self, tool_name: str, tool_input: Dict) -> str:
         """Execute a tool and return the result."""
         if not TOOLS_AVAILABLE:
-            return "⚠️ Tools not available"
+            return "[ERROR] Tools not available"
 
         try:
             if tool_name == "search_hadith_standalone":
@@ -552,10 +602,10 @@ Provides reset points, though rushed prayers may limit depth.
                 return result.get('data', 'No statistics')
 
             else:
-                return f"⚠️ Unknown tool: {tool_name}"
+                return f"[ERROR] Unknown tool: {tool_name}"
 
         except Exception as e:
-            return f"⚠️ Error: {str(e)}"
+            return f"[ERROR] Error: {str(e)}"
 
     def build_user_message(self, topic: str, task_description: str, context: List[str] = None) -> str:
         """
