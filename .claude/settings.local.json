@@ -8,7 +8,12 @@
       "Bash(C:UsersUserAppDataLocalProgramsPythonPython312python.exe -m pip install -e .)",
       "Bash(\"/c/Users/User/AppData/Local/Programs/Python/Python312/python.exe\" -m pip install -e .)",
       "Bash(pip show:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(chainlit run:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(start /B chainlit run chainlit_app.py --port 8000)"
     ],
     "deny": [],
     "ask": []
