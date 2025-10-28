@@ -14,11 +14,18 @@ from dotenv import load_dotenv
 
 # Load environment variables
 # Only load .env file when running locally (not in production)
-if os.getenv('RAILWAY_ENVIRONMENT') is None:
+# Railway sets RAILWAY_STATIC_URL or RAILWAY_ENVIRONMENT_NAME automatically
+is_railway = os.getenv('RAILWAY_STATIC_URL') or os.getenv('RAILWAY_ENVIRONMENT_NAME')
+if not is_railway:
     # Running locally - load from .env file
     env_path = Path(__file__).parent / '.env'
     if env_path.exists():
         load_dotenv(dotenv_path=env_path)
+        print(f"✅ Loaded .env file from {env_path}")
+    else:
+        print("⚠️ .env file not found, looking for environment variables...")
+else:
+    print(f"🚂 Running on Railway - using environment variables directly")
 # In production (Railway), environment variables are already available via os.getenv()
 
 # Import our debate engine
@@ -139,8 +146,12 @@ async def start():
     # Check API key
     api_key = os.getenv('ANTHROPIC_API_KEY')
     if not api_key:
+        # Debug: Show environment info
+        is_railway = os.getenv('RAILWAY_STATIC_URL') or os.getenv('RAILWAY_ENVIRONMENT_NAME')
+        env_info = f"Railway: {bool(is_railway)}"
+
         await cl.Message(
-            content="⚠️ **API Key Missing**\n\nPlease set your ANTHROPIC_API_KEY in the environment variables.",
+            content=f"⚠️ **API Key Missing**\n\nPlease set your ANTHROPIC_API_KEY in the environment variables.\n\n**Debug Info:**\n- Environment: {env_info}\n- Railway URL: {os.getenv('RAILWAY_STATIC_URL', 'Not set')}\n- Railway Env: {os.getenv('RAILWAY_ENVIRONMENT_NAME', 'Not set')}\n\nIf you're on Railway, make sure you've added ANTHROPIC_API_KEY in the Variables tab of your project settings.",
             author="System"
         ).send()
         return
