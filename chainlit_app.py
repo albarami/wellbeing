@@ -12,9 +12,13 @@ from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load environment variables (works both locally and in production)
 env_path = Path(__file__).parent / '.env'
-load_dotenv(dotenv_path=env_path)
+if env_path.exists():
+    load_dotenv(dotenv_path=env_path)
+else:
+    # In production (Railway), environment variables are already set
+    load_dotenv()
 
 # Import our debate engine
 from src.academic_debate_council.direct_chat_agents import DebateAgentsManager
